@@ -5,6 +5,7 @@ import json # To read the JSON file
 import tkinter as tk # To draw the GUI
 import random # To pick random colours
 import math # Imports module for mathematic operations
+
 # --- Definitions ---
 
 canvas_width = 1500
