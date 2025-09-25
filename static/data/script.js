@@ -1,16 +1,36 @@
-const images = ["static/data/images/spectrum1.png", "static/data/images/spectrum2.png", "static/data/images/spectrum3.png"]; // Add more if needed
+const images = [
+    "static/data/images/spectrum1.png",
+    "static/data/images/spectrum2.png",
+    "static/data/images/spectrum3.png",
+    "static/data/images/spectrum4.png",
+    "static/data/images/spectrum5.png",
+    "static/data/images/spectrum6.png",
+    "static/data/images/spectrum7.png",
+    "static/data/images/spectrum8.png"
+];
+
 let current = 0;
 
 const spectrumImg = document.getElementById("spectrum");
-const zoomInBtn = document.getElementById("zoomIn");
-const zoomOutBtn = document.getElementById("zoomOut");
+const buttons = document.querySelectorAll(".side-menu button");
 
 function changeImage(newIndex) {
-    spectrumImg.style.opacity = 0; // start fade out
+
+    /*
+    Changes image (with fade).
+
+    Arguments:
+        "newIndex"
+    
+    Returns:
+        None
+    */
+
+    spectrumImg.style.opacity = 0;
     setTimeout(() => {
         spectrumImg.src = images[newIndex];
-        spectrumImg.style.opacity = 1; // fade in
-    }, 250); // half of transition duration
+        spectrumImg.style.opacity = 1;
+    }, 250);
 }
 
 function zoomIn() {
@@ -35,15 +55,19 @@ function zoomOut() {
     }
 }
 
-// Button click events
-zoomInBtn.addEventListener("click", zoomIn);
-zoomOutBtn.addEventListener("click", zoomOut);
+function updateActiveButton() {
+    buttons.forEach((btn, idx) => {
+        btn.classList.toggle("active", idx === current);
+    });
+}
 
-// Keyboard support
-document.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowRight") {
-        zoomIn();
-    } else if (event.key === "ArrowLeft") {
-        zoomOut();
-    }
+// Attach click event to all buttons
+buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const index = parseInt(btn.getAttribute("data-index"));
+        changeImage(index);
+    });
 });
+
+// Initialize
+updateActiveButton();

@@ -23,16 +23,24 @@
   <h2 class = "subtitle"> By Vitus and Hanna </h2>
 </header>
 
-<div class = "image-container">
+<div class = "container">
+  
+  <nav class="side-menu">
+    <button data-index="0">0 - 50 kHz</button>
+    <button data-index="1">50 - 200 kHz</button>
+    <button data-index="2">200 - 400 kHz</button>
+    <button data-index="3">400 - 600 kHz</button>
+    <button data-index="4">600 kHz - 1 MHz</button>
+    <button data-index="5">1 - 2 MHz</button>
+    <button data-index="6">2 - 4 MHz</button>
+    <button data-index="7">4 - 6 MHz</button>
+  </nav>
 
-  <img id = "spectrum" src = "static/data/images/spectrum1.png" alt = "Frequency Spectrum"> <!-- Frequency spectrum image -->
+  <div class = "image-container">
 
-  <div class = "buttons"> <!-- Container for buttons -->
+    <img id = "spectrum" src = "static/data/images/spectrum1.png" alt = "Frequency Spectrum"> <!-- Frequency spectrum image -->
 
-    <button id="zoomIn">Zoom In</button> <!-- Zoom in button -->
-    <button id="zoomOut">Zoom Out</button> <!-- Zoom out button -->
-
-  </div> <!-- End of buttons container -->
+  </div>
 
 </div>
 
