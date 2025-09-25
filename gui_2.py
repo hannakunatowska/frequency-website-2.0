@@ -22,10 +22,10 @@ line_ranges = {
 
 # --- Custom tick positions for each line ---
 line_ticks_custom = {
-    0: [0, 12.1, 52, 147, 694, 2700, 11200],     # ticks for line 0
-    1: [14000, 15400, 17700, 22000],            # ticks for line 1
-    2: [27000, 30000, 34000, 37500],            # ticks for line 2
-    3: [40500, 42500, 47200, 50000]          # ticks for line 3 ¨
+    0: [0, 12.1, 52, 147, 694, 2700, 12500],     # ticks for line 0
+    1: [12500, 15400, 17700, 25000],            # ticks for line 1
+    2: [25000, 30000, 34000, 37500],            # ticks for line 2
+    3: [37500, 40500, 42500, 47200, 50000]          # ticks for line 3 ¨
 }
 
 # --- Load data ---
