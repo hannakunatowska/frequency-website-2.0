@@ -3,25 +3,40 @@
 
 <head>  <!-- Head section of the HTML document -->
 
+<link rel = "preconnect" href = "https://fonts.googleapis.com">
+<link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sono:wght@200..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
 <meta charset = "UTF-8"> <!-- Sets character encoding to UTF-8 -->
 <meta name="viewport" content = "width = device-width, initial-scale = 1.0"> <!-- Sets viewport for responsive design -->
-<title> Frequency Spectrum Viewer </title> <!-- Title of the webpage -->
-<link rel = "stylesheet" href = "style.css"> <!-- Links to external CSS file for styling -->
+<title> Swedish frequency allocation </title> <!-- Title of the webpage -->
+<link rel = "stylesheet" href = "static/data/styles.css"> <!-- Links to external CSS file for styling -->
 
 </head> <!-- End of head section -->
 
 <body> <!-- Body section of the HTML document -->
 
-<img id = "spectrum" src = "spectrum1.png" alt = "Frequency Spectrum"> <!-- Frequency spectrum image -->
+<header>
+  <h1> Swedish frequency allocation </h1>
+  <h2 class = "subtitle"> By Vitus and Hanna </h2>
+</header>
 
-<div class = "buttons"> <!-- Container for buttons -->
+<div class = "image-container">
 
-  <button id="zoomIn">Zoom In</button> <!-- Zoom in button -->
-  <button id="zoomOut">Zoom Out</button> <!-- Zoom out button -->
+  <img id = "spectrum" src = "static/data/images/spectrum1.png" alt = "Frequency Spectrum"> <!-- Frequency spectrum image -->
 
-</div> <!-- End of buttons container -->
+  <div class = "buttons"> <!-- Container for buttons -->
 
-<script src = "script.js"></script> <!-- Links to external JavaScript file for functionality -->
+    <button id="zoomIn">Zoom In</button> <!-- Zoom in button -->
+    <button id="zoomOut">Zoom Out</button> <!-- Zoom out button -->
+
+  </div> <!-- End of buttons container -->
+
+</div>
+
+<script src = "static/data/script.js"></script> <!-- Links to external JavaScript file for functionality -->
 
 </body> <!-- End of body section -->
 
