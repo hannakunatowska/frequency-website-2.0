@@ -67,7 +67,7 @@ def draw_custom_ticks_log(y, line_index, min_f, max_f):
         if min_f <= tick <= max_f:
             x = freqToPixelX(tick, min_f, max_f)
             c.create_line(x, y - 5, x, y + 5)
-            c.create_text(x, y + 15, text=f"{tick:.6f} MHz", font=("Arial", 7))
+            c.create_text(x, y + 15, text=f"{tick:g} MHz", font=("Arial", 7))
 
 # --- Draw lines and ticks ---
 for line_index, y in enumerate(freq_line_y_coordinates):
