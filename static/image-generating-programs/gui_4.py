@@ -113,7 +113,12 @@ for start, end, label in bands:
         x2 = max(margin, min(canvas_width - margin, x2))
 
         c.create_rectangle(x1, y1, x2, y2, fill=color, outline="black")
-        if x2 - x1 > 30:
-            c.create_text((x1 + x2) / 2, (y1 + y2) / 2, text=label, font=("Arial", 6))
+        rect_width = x2 - x1
+        approx_text_width = len(label) * 6  # ca 6 pixlar per tecken vid font storlek 6
+
+
+        if rect_width*1.9 >= approx_text_width:
+            c.create_text((x1 + x2)/2, (y1 + y2)/2, text=label, font=("Ericsson Hilda", 6), anchor="c")
+
 
 root.mainloop()
