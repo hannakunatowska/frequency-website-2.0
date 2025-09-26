@@ -1,28 +1,22 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body, html { /* Body container */
+  background: white; /* Sets background color */
+  display: flex;  /* Makes the body a flex container */
+  flex-direction: column;  /* Makes it flex vertically */
+  align-items: center;  /* Makes it center its children horizontally */
 }
 
-header {
-  position: fixed;
-  top: 0;
-  color: black;
-  width: 100%;
-  text-align: center;
-  z-index: 10;
-  padding: 10px 0;
+header {  /* Header container */
+  position: absolute;  /* Sets the header positioning to absolute */
+  color: black;  /* Sets header text color */
+  text-align: center;  /* Makes it center it's text content */
+  padding: 10px;  /* Sets padding to 10 pixels in all directions */
 }
 
-header h1 {
-  margin: 0;
-  font-family: "Jersey 10";
-  font-size: 3rem;
-  background: linear-gradient(90deg, red, orange, green, blue, purple);
+header h1 { /* Main title text */
+  margin: 0;  /* Sets margin to 0, removing default spacing */
+  font-family: "Jersey 10";  /* Sets font */
+  font-size: 3rem; /* Sets font size in unit "rem" (relative to the font size of the HTML document, default is 16px) */
+  background: linear-gradient(45deg, red, orange, green, blue, purple);  /* Sets text background to a linear gradient going in a 45 degree direction using given colors */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -31,21 +25,27 @@ header h2.subtitle {
   font-family: "Tinos";
   font-size: 1rem;
   margin: 0;
+  opacity: 80%;
 }
 
 .container {
   display: flex;
-  margin-top: 80px; /* space for header */
+  gap: 20px;
+  margin-top: 80px;
   height: calc(100vh - 80px);
+  align-items: flex-start;
 }
 
 .side-menu {
   display: flex;
   flex-direction: column;
   width: 200px;
+  height: auto;
   background: #f4f4f4;
   padding: 10px;
   border-left: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
 .side-menu button {
@@ -57,17 +57,19 @@ header h2.subtitle {
   border: none;
   cursor: pointer;
   text-align: left;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
+  border-radius: 6px;
 }
 
 .side-menu button.active {
-  background: #333; /* highlight current image */
+  background: #4a90e2;
   font-weight: bold;
   color: white;
 }
 
 .side-menu button:hover {
   background: #d6d6d6;
+  transform: translateX(-2px);
 }
 
 .image-container {
@@ -86,5 +88,23 @@ img {
   max-height: 100%;
   object-fit: contain;
   transition: opacity 0.5s ease-in-out;
-  opacity: 1;
+  opacity: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  border-radius: 8px;
+}
+
+img[src] {opacity: 1;}
+
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+  .side-menu {
+    flex-direction: row;
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #ccc;
+  }
+  .side-menu button {
+    flex: 1;
+    text-align: center;
+  }
 }
