@@ -14,18 +14,18 @@ freq_line_width = 2
 
 # --- Frequency ranges for the new zoomed-in four lines ---
 line_ranges = {
-    0: {"min": 0, "max": 12.20703125},
-    1: {"min": 12.20703125, "max": 24.4140625},
-    2: {"min": 24.4140625, "max": 36.62109375},
-    3: {"min": 36.62109375, "max": 48.828125},
+    0: {"min": 0, "max": 12},
+    1: {"min": 12, "max": 24},
+    2: {"min": 24, "max": 37},
+    3: {"min": 37, "max": 49},
 }
 
 # --- Custom tick positions for each line ---
 line_ticks_custom = {
-    0: [0, 0.009, 0.07, 0.4, 9.9],     # ticks for line 0
-    1: [13.2, 15.1, 18.9, 24],            # ticks for line 1
-    2: [25.55, 28, 31.375, 35.275],            # ticks for line 2
-    3: [38.25, 39.55, 41.015, 48.828125]          # ticks for line 3 
+    0: [0, 0.009, 0.07, 0.4, 9.9, 12],     # ticks for line 0
+    1: [12, 15.1, 18.9, 24],            # ticks for line 1
+    2: [24, 28, 31.375, 37],            # ticks for line 2
+    3: [37, 39.55, 41.015, 49]          # ticks for line 3 
     # the last box keeps going so the last tick is just where the logarithmic line stops
 }
 
@@ -46,7 +46,7 @@ for b in raw:
 
 # --- Tkinter setup ---
 root = tk.Tk()
-root.title("Frequency Allocation 0-48.828125 MHz")
+root.title("Swedish Frequencies 0-49 MHz")
 c = tk.Canvas(root, width=canvas_width, height=canvas_height, background="white")
 c.pack()
 
