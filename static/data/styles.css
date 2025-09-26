@@ -119,10 +119,10 @@ img[src] {opacity: 1;}
 
 #highlight-overlay {
   position: absolute;
-  left: 40px;
-  top: 0px;
-  width: 1200px;
-  height: 200px;
+  left: 2%;
+  top: 0%;
+  width: 97%;
+  height: 22%;
   border: 2px dashed rgba(0, 0, 0, 0.7);
   background-color: transparent;
   pointer-events: none;

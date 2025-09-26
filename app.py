@@ -1,8 +1,10 @@
 
 # --- Imports ---
+
 import os
 from flask import Flask, render_template, jsonify # Imports Flask (which is the main class used to create the web app) and render_template (which makes it possible to return HTML file from "templates/")
 from datetime import datetime
+
 # --- App ---
 
 app = Flask(__name__, static_folder = "static", template_folder = "templates") # Creates Flask app object and specifies where it lives and where it will look for files
@@ -32,10 +34,13 @@ def index():
     return render_template("index.html")
 
 @app.route("/visits")
+
 def visits_route():
+
     """
     Returns all visits as JSON.
     """
+
     if not os.path.exists(VISITS_FILE):
         return jsonify([])
     with open(VISITS_FILE, "r") as f:
@@ -44,4 +49,4 @@ def visits_route():
     return jsonify(visits)
 
 if __name__ == "__main__": # If app.py is run directly (i.e not imported as a module in another file):
-    app.run(debug = True)
+    app.run(host = '0.0.0.0', port = 80, debug = True)
