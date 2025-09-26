@@ -43,16 +43,17 @@ header h2.subtitle {
   display: flex;
   flex-direction: column;
   width: 200px;
-  background: #111;
+  background: #f4f4f4;
   padding: 10px;
+  border-left: 1px solid #ccc;
 }
 
 .side-menu button {
   margin: 5px 0;
   padding: 10px;
   font-size: 1rem;
-  color: white;
-  background: #222;
+  color: rgba(0, 0, 0, 0.6);
+  background: #e6e6e6;
   border: none;
   cursor: pointer;
   text-align: left;
@@ -60,12 +61,13 @@ header h2.subtitle {
 }
 
 .side-menu button.active {
-  background: #555; /* highlight current image */
+  background: #333; /* highlight current image */
   font-weight: bold;
+  color: white;
 }
 
 .side-menu button:hover {
-  background: #333;
+  background: #d6d6d6;
 }
 
 .image-container {

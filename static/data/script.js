@@ -33,28 +33,6 @@ function changeImage(newIndex) {
     }, 250);
 }
 
-function zoomIn() {
-    if (current < images.length - 1) {
-        current++;
-        changeImage(current);
-        zoomOutBtn.style.display = "inline-block";
-    }
-    if (current === images.length - 1) {
-        zoomInBtn.style.display = "none";
-    }
-}
-
-function zoomOut() {
-    if (current > 0) {
-        current--;
-        changeImage(current);
-        zoomInBtn.style.display = "inline-block";
-    }
-    if (current === 0) {
-        zoomOutBtn.style.display = "none";
-    }
-}
-
 function updateActiveButton() {
     buttons.forEach((btn, idx) => {
         btn.classList.toggle("active", idx === current);
@@ -65,7 +43,9 @@ function updateActiveButton() {
 buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
         const index = parseInt(btn.getAttribute("data-index"));
-        changeImage(index);
+        current = index;              // ✅ update the global index
+        changeImage(current);
+        updateActiveButton();         // ✅ refresh button highlight
     });
 });
 

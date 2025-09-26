@@ -5,12 +5,12 @@
 
 <link rel = "preconnect" href = "https://fonts.googleapis.com">
 <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Sono:wght@200..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href = "https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel = "stylesheet">
+<link href = "https://fonts.googleapis.com/css2?family=Sono:wght@200..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel = "stylesheet">
 
 
 <meta charset = "UTF-8"> <!-- Sets character encoding to UTF-8 -->
-<meta name="viewport" content = "width = device-width, initial-scale = 1.0"> <!-- Sets viewport for responsive design -->
+<meta name = "viewport" content = "width = device-width, initial-scale = 1.0"> <!-- Sets viewport for responsive design -->
 <title> Swedish frequency allocation </title> <!-- Title of the webpage -->
 <link rel = "stylesheet" href = "static/data/styles.css"> <!-- Links to external CSS file for styling -->
 
@@ -19,13 +19,22 @@
 <body> <!-- Body section of the HTML document -->
 
 <header>
+
   <h1> Swedish frequency allocation </h1>
   <h2 class = "subtitle"> By Vitus and Hanna </h2>
+
 </header>
 
 <div class = "container">
-  
-  <nav class="side-menu">
+
+  <div class = "image-container">
+
+    <img id = "spectrum" src = "static/data/images/spectrum1.png" alt = "Frequency Spectrum"> <!-- Frequency spectrum image -->
+
+  </div>
+
+  <nav class = "side-menu">
+
     <button data-index="0">0 - 50 kHz</button>
     <button data-index="1">50 - 200 kHz</button>
     <button data-index="2">200 - 400 kHz</button>
@@ -34,13 +43,8 @@
     <button data-index="5">1 - 2 MHz</button>
     <button data-index="6">2 - 4 MHz</button>
     <button data-index="7">4 - 6 MHz</button>
+
   </nav>
-
-  <div class = "image-container">
-
-    <img id = "spectrum" src = "static/data/images/spectrum1.png" alt = "Frequency Spectrum"> <!-- Frequency spectrum image -->
-
-  </div>
 
 </div>
 
