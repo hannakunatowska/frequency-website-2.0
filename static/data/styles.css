@@ -5,7 +5,7 @@
 
 body, html { /* Body container */
   background: white; /* Sets background color */
-  display: flex;  /* Makes the body a flexible container */
+  display: flex; /* Makes the body a flexible container */
   flex-direction: column; /* Makes it flex vertically */
   align-items: center;  /* Makes it center its children horizontally */
 }
@@ -14,7 +14,7 @@ header {  /* Header container */
   position: absolute;  /* Sets the header positioning to absolute */
   color: black;  /* Sets header text color */
   text-align: center;  /* Makes it center it's text content */
-  padding: 10px; /* Sets padding to 10 pixels in all directions */
+  padding: 10px; /* Sets padding in all directions */
 }
 
 header h1 { /* Main title text */
@@ -49,41 +49,39 @@ header h2.subtitle { /* Subtitle text */
   background: #f4f4f4; /* Sets its background */
   padding: 10px; /* Sets padding in all directions */
   border: 1px solid #ccc; /* Adds a border and sets width, style and color */
-  box-shadow: 5px 5px 8px rgba(0,0,0,0.1); /* Adds a shadow (offset-x, offset-y, blur, color) */
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow (offset-x, offset-y, blur, color) */
   border-radius: 10px; /* Rounds the corners */
 }
 
-.side-menu button {
-  margin: 5px 0;
-  padding: 10px;
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.6);
-  background: #e6e6e6;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  transition: background 0.3s, transform 0.2s;
-  border-radius: 6px;
+.side-menu button { /* Side menu buttons */
+  margin: 5px 0; /* Sets vertical (first value) and horizontal (second value) margins */
+  padding: 10px; /* Sets padding in all directions */
+  font-size: 1rem; /* Sets font size in unit "rem" (relative to the font size of the HTML document, default is 16px) */
+  color: rgba(0, 0, 0, 0.6); /* Sets button text color */
+  background: #e6e6e6; /* Sets button background */
+  border: none; /* Removes standard border */
+  text-align: left; /* Makes the text left-aligned */
+  transition: background 0.3s, transform 0.2s; /* Sets time for changing background and transforming (to make smooth hovering effects) */
+  border-radius: 6px; /* Rounds the corners */
 }
 
-.side-menu button.active {
-  background: #4a90e2;
-  font-weight: bold;
-  color: white;
+.side-menu button.active { /* Active side menu buttons */
+  background: #4a90e2; /* Sets background */
+  font-weight: bold; /* Sets font weight */
+  color: white; /* Sets text color */
 }
 
-.side-menu button:hover {
-  background: #d6d6d6;
-  transform: translateX(-2px);
+.side-menu button:hover { /* Side menu buttons when mouse hovers over them */
+  background: #d6d6d6; /* Sets background */
+  transform: translateX(-5px); /* Transforms button coordinates horizontally (moves it to the left) */
 }
 
-.image-container {
-  margin-top: 40px; /* enough to push the image below the header */
-  flex: 1;
-  display: flex;
-  justify-content: center;
+.image-container { /* Image container */
+  flex: 1; /* Makes it fill remaining horizontal space in its container */
+  display: flex; /* Makes it a flexible container */
+  justify-content: center; 
   align-items: center;
-  position: relative; /* needed for button positioning */
+  position: relative;
   width: 100%;
   height: calc(100vh - 70px); /* fill remaining viewport */
 }
