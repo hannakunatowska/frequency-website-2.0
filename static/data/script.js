@@ -13,6 +13,8 @@ let current = 0;
 
 const spectrumImg = document.getElementById("spectrum");
 const buttons = document.querySelectorAll(".side-menu button");
+const overlay = document.getElementById('highlight-overlay');
+const previewImage = document.getElementById('preview-image');
 
 function changeImage(newIndex) {
 
@@ -39,13 +41,39 @@ function updateActiveButton() {
     });
 }
 
-// Attach click event to all buttons
 buttons.forEach((btn) => {
+
+    const index = parseInt(btn.getAttribute("data-index"));
+
     btn.addEventListener("click", () => {
-        const index = parseInt(btn.getAttribute("data-index"));
-        current = index;              // ✅ update the global index
+        current = index;
         changeImage(current);
-        updateActiveButton();         // ✅ refresh button highlight
+        overlay.style.opacity = '0';
+        previewImage.style.opacity = '0';
+        updateActiveButton();
+    });
+
+    btn.addEventListener('mouseenter', () => {
+
+        const index = parseInt(btn.getAttribute("data-index"));
+
+        if (index <= current) return;
+
+        overlay.style.opacity = '1';
+
+        previewImage.src = images[index];
+        previewImage.style.display = 'block';
+        previewImage.style.opacity = '1';
+
+        const rect = btn.getBoundingClientRect();
+        const previewHeight = previewImage.offsetHeight || 120;
+        previewImage.style.top = `${rect.top + rect.height/2 - previewHeight/2}px`;
+        previewImage.style.left = `${rect.right + 30}px`;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+        overlay.style.opacity = '0';
+        previewImage.style.opacity = '0';
     });
 });
 

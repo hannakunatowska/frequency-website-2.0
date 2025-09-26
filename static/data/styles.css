@@ -57,6 +57,7 @@ header h2.subtitle { /* Subtitle text */
   margin: 5px 0; /* Sets vertical (first value) and horizontal (second value) margins */
   padding: 10px; /* Sets padding in all directions */
   font-size: 1rem; /* Sets font size in unit "rem" (relative to the font size of the HTML document, default is 16px) */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: rgba(0, 0, 0,); /* Sets button text color */
   opacity: 70%;
   background: #e6e6e6; /* Sets button background */
@@ -68,7 +69,7 @@ header h2.subtitle { /* Subtitle text */
 
 .side-menu button:nth-child(1) { background-color: rgba(255, 0, 0, 0.3); }
 .side-menu button:nth-child(2) { background-color: rgba(255, 165, 0, 0.3); }
-.side-menu button:nth-child(3) { background-color: rgba(255, 255, 0, 0.3); }
+.side-menu button:nth-child(3) { background-color: rgba(157, 255, 0, 0.3); }
 .side-menu button:nth-child(4) { background-color: rgba(0, 128, 0, 0.3); }
 .side-menu button:nth-child(5) { background-color: rgba(0, 0, 255, 0.3); }
 .side-menu button:nth-child(6) { background-color: rgba(75, 0, 130, 0.3); }
@@ -77,7 +78,7 @@ header h2.subtitle { /* Subtitle text */
 
 .side-menu button.active:nth-child(1) { background-color: rgba(255, 0, 0, 1); }
 .side-menu button.active:nth-child(2) { background-color: rgba(255, 165, 0, 1); }
-.side-menu button.active:nth-child(3) { background-color: rgba(255, 255, 0, 1); }
+.side-menu button.active:nth-child(3) { background-color: rgb(157, 255, 0); }
 .side-menu button.active:nth-child(4) { background-color: rgba(0, 128, 0, 1); }
 .side-menu button.active:nth-child(5) { background-color: rgba(0, 0, 255, 1); }
 .side-menu button.active:nth-child(6) { background-color: rgba(75, 0, 130, 1); }
@@ -115,6 +116,41 @@ img {
 }
 
 img[src] {opacity: 1;}
+
+#highlight-overlay {
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  width: 1200px;
+  height: 200px;
+  border: 2px dashed rgba(0, 0, 0, 0.7);
+  background-color: transparent;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.preview-container {
+  margin-left: 10px; /* space between side menu and preview */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#preview-image {
+  position: absolute;       /* position relative to viewport */
+  width: 150px;
+  height: 120px;
+  object-fit: contain;
+  border: 2px solid rgba(0, 0, 0, 0.755);  /* thick black border */
+  border-radius: 6px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow (offset-x, offset-y, blur, color) */
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;     /* doesn’t block mouse events */
+  z-index: 20;              /* on top of everything */
+}
 
 @media (max-width: 768px) {
   .container { flex-direction: column; }
