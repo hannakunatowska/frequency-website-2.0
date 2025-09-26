@@ -14,18 +14,18 @@ freq_line_width = 2
 
 # --- Frequency ranges for the four lines ---
 line_ranges = {
-    0: {"min": 0, "max": 48.828125},
-    1: {"min": 48.828125, "max": 97.65625},
-    2: {"min": 97.65625, "max": 146.484375},
-    3: {"min": 146.484375, "max": 195.3125},
+    0: {"min": 0, "max": 49},
+    1: {"min": 49, "max": 98},
+    2: {"min": 98, "max": 146},
+    3: {"min": 146, "max": 195},
 }
 
 # --- Custom tick positions for each line ---
 line_ticks_custom = {
-    0: [0, 3.9, 7.484, 14, 24, 40.8],     # ticks for line 0
-    1: [52, 74.8, 87.5],            # ticks for line 1
-    2: [108, 137, 121.45],            # ticks for line 2
-    3: [147, 156.4875, 171]          # ticks for line 3 
+    0: [0, 3.9, 7.484, 14, 24, 49],     # ticks for line 0
+    1: [49, 74.8, 87.5, 98],            # ticks for line 1
+    2: [98, 108, 137, 121.45, 146],            # ticks for line 2
+    3: [146, 156.4875, 171, 195]          # ticks for line 3 
 }
 
 # --- Load data ---
@@ -45,7 +45,7 @@ for b in raw:
 
 # --- Tkinter setup ---
 root = tk.Tk()
-root.title("Frequency Allocation 0-195.3125 MHz")
+root.title("Swedish Frequencies 0-195 MHz")
 c = tk.Canvas(root, width=canvas_width, height=canvas_height, background="white")
 c.pack()
 
