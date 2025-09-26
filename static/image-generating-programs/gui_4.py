@@ -48,7 +48,7 @@ for b in raw:
 
 # --- Tkinter setup ---
 root = tk.Tk()
-root.title("Frequency Allocation 0-3125 MHz")
+root.title("Swedish Frequencies 0-3125 MHz")
 c = tk.Canvas(root, width=canvas_width, height=canvas_height, background="white")
 c.pack()
 
