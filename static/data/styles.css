@@ -1,5 +1,5 @@
 :root {  /* Root settings */
-  --header-height: 80px; /* Sets the header height */
+  --header-height: 150px; /* Sets the header height */
   --side-menu-width: 200px; /* Sets the side menu width */
 }
 
@@ -35,7 +35,7 @@ header h2.subtitle { /* Subtitle text */
 
 .container { /* Container for the images and the side menu */
   display: flex; /* Makes it a flexible container */
-  gap: 20px; /* Sets gap between children (images and the side menu) */
+  gap: 100px; /* Sets gap between children (images and the side menu) */
   margin-top: var(--header-height); /* Sets the top margin, which pushes the container below the header */
   height: calc(100vh - var(--header-height)); /* Sets the container height to the entire vertical space below the header */
   align-items: flex-start; /* Makes the items align at the top of the container */
@@ -57,7 +57,8 @@ header h2.subtitle { /* Subtitle text */
   margin: 5px 0; /* Sets vertical (first value) and horizontal (second value) margins */
   padding: 10px; /* Sets padding in all directions */
   font-size: 1rem; /* Sets font size in unit "rem" (relative to the font size of the HTML document, default is 16px) */
-  color: rgba(0, 0, 0, 0.6); /* Sets button text color */
+  color: rgba(0, 0, 0,); /* Sets button text color */
+  opacity: 70%;
   background: #e6e6e6; /* Sets button background */
   border: none; /* Removes standard border */
   text-align: left; /* Makes the text left-aligned */
@@ -65,10 +66,28 @@ header h2.subtitle { /* Subtitle text */
   border-radius: 6px; /* Rounds the corners */
 }
 
+.side-menu button:nth-child(1) { background-color: rgba(255, 0, 0, 0.3); }
+.side-menu button:nth-child(2) { background-color: rgba(255, 165, 0, 0.3); }
+.side-menu button:nth-child(3) { background-color: rgba(255, 255, 0, 0.3); }
+.side-menu button:nth-child(4) { background-color: rgba(0, 128, 0, 0.3); }
+.side-menu button:nth-child(5) { background-color: rgba(0, 0, 255, 0.3); }
+.side-menu button:nth-child(6) { background-color: rgba(75, 0, 130, 0.3); }
+.side-menu button:nth-child(7) { background-color: rgba(238, 130, 238, 0.3); }
+.side-menu button:nth-child(8) { background-color: rgba(128, 0, 128, 0.3); }
+
+.side-menu button.active:nth-child(1) { background-color: rgba(255, 0, 0, 1); }
+.side-menu button.active:nth-child(2) { background-color: rgba(255, 165, 0, 1); }
+.side-menu button.active:nth-child(3) { background-color: rgba(255, 255, 0, 1); }
+.side-menu button.active:nth-child(4) { background-color: rgba(0, 128, 0, 1); }
+.side-menu button.active:nth-child(5) { background-color: rgba(0, 0, 255, 1); }
+.side-menu button.active:nth-child(6) { background-color: rgba(75, 0, 130, 1); }
+.side-menu button.active:nth-child(7) { background-color: rgba(238, 130, 238, 1); }
+.side-menu button.active:nth-child(8) { background-color: rgba(128, 0, 128, 1); }
+
 .side-menu button.active { /* Active side menu buttons */
-  background: #4a90e2; /* Sets background */
   font-weight: bold; /* Sets font weight */
   color: white; /* Sets text color */
+  opacity: 100%;
 }
 
 .side-menu button:hover { /* Side menu buttons when mouse hovers over them */
@@ -90,9 +109,8 @@ img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
   opacity: 0;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
   border-radius: 8px;
 }
 
