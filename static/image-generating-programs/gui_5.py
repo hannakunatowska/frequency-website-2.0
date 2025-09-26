@@ -14,18 +14,18 @@ freq_line_width = 2
 
 # --- Frequency ranges for the four lines ---
 line_ranges = {
-    0: {"min": 0, "max": 195.3125},
-    1: {"min": 195.3125, "max": 390.625},
-    2: {"min": 390.625, "max": 585.9375},
-    3: {"min": 585.9375, "max": 781.25},
+    0: {"min": 0, "max": 200},
+    1: {"min": 200, "max": 390},
+    2: {"min": 390, "max": 590},
+    3: {"min": 590, "max": 782},
 }
 
 # --- Custom tick positions for each line ---
 line_ticks_custom = {
-    0: [0, 12.1, 52, 147],     # ticks for line 0
-    1: [230, 339, 387],            # ticks for line 1
-    2: [404, 450, 470],            # ticks for line 2
-    3: [694]          # ticks for line 3 ¨
+    0: [0, 12.1, 52, 147, 200],     # ticks for line 0
+    1: [200, 230, 339, 390],            # ticks for line 1
+    2: [390, 450, 470, 590],            # ticks for line 2
+    3: [590, 694, 782]          # ticks for line 3 ¨
 }
 
 # --- Load data ---
